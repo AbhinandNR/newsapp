@@ -48,8 +48,9 @@ const Newsview = () => {
                                         <div class="card-body">
                                             <p class="card-text">Title:{value.title}</p>
                                              <p class="card-text">publishedAt:{value.publishedAt}</p>
-                                              <p class="card-text">Link:<a href={value.url} target='blank'>CLick HERE</a></p>
+                                              {/* <p class="card-text">Link:<a href={value.url} target='blank'>CLick HERE</a></p> */}
                                               {/* <a href={value.url} class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Click to View</a> */}
+                                              <button className="btn btn-success"> <a href={value.url} style={{color:'white',textDecoration:'none'}} target='blank'>click to view</a> </button>
                                         </div>
                                 </div>
                             </div>
