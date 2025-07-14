@@ -1,5 +1,8 @@
 import axios from 'axios'
 import React, { use, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
+import NavNews from './NavNews'
 
 const Newsview = () => {
 
@@ -25,7 +28,7 @@ const Newsview = () => {
     useEffect(()=>{fetchDatafrom()},[])
     return (
         <div>
-
+<NavNews/>
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -45,7 +48,8 @@ const Newsview = () => {
                                         <div class="card-body">
                                             <p class="card-text">Title:{value.title}</p>
                                              <p class="card-text">publishedAt:{value.publishedAt}</p>
-                                              <p class="card-text">Link:{value.url}</p>
+                                              <p class="card-text">Link:<a href={value.url} target='blank'>CLick HERE</a></p>
+                                              {/* <a href={value.url} class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Click to View</a> */}
                                         </div>
                                 </div>
                             </div>
